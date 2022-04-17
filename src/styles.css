@@ -2,8 +2,8 @@
 
 body {
     /* background-color: rgb(241, 224, 206); */
-    color: brown;
+    color: white;
     background-image: url(./assets/DpDUVNZWkAAYrQT.jpg);
-
-
+    background-size: cover;
+    opacity: 20px;
 }
