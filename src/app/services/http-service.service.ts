@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../classes/user';
 import { Repository } from '../classes/repository';
@@ -9,5 +10,5 @@ import { Repository } from '../classes/repository';
 })
 export class HttpServiceService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 }
