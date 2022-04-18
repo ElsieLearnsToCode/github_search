@@ -7,7 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 const routes: Routes = [
   {path:"about", component: AboutComponent},
   {path:"navbar", component: NavbarComponent},
-  {path: "", component: GithubComponent}
+  {path: "", component: GithubComponent},
+  
 ];
 
 @NgModule({
