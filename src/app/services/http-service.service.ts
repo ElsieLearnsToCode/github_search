@@ -16,6 +16,6 @@ export class HttpServiceService {
   }
 
   getUsers() {
-    return this.http.get(`https://api.github.com/users/api_key=%${environment.APIKey}`);
+    return this.http.get(`https://api.github.com/search/users?q={query}{&page,per_page,sort,order}/api_key=%${environment.APIKey}`);
   }
 }
