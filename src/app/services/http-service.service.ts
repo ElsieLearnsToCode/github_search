@@ -21,7 +21,7 @@ export class HttpServiceService {
   }
 
 // logic to get gh profile
-  public getProfile (githubUserQuery: string) {
+  public getProfile (githubUserQuery: string):Observable<any>{
     let dataUrl = `https://api.github.com/users/${githubUserQuery}?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRETS}`;
     return this.http.get("dataURL").pipe(
       retry (),
