@@ -5,12 +5,13 @@
                 <div class="card-header bg-dark text-white">
                     <h4>Search User</h4>
                     <div class="card-body">
-                        <form action="">
+                        <form action="" (submit)="searchUserName()">
                             <div class="form-group">
-                                <input type="search" class="form-control" placeholder="Enter Github Username...">
+                                <input type="search"  name="user" class="form-control" placeholder="Enter Github Username...">
                             </div>
+                            
                             <div>
-                                <input type="submit" class="btn btn-secondary" value="submit">
+                                <input type="submit" class="btn btn-secondary" value="Search">
                             </div>
                         </form>
                     </div>

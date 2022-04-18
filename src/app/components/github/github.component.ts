@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  constructor(private httpservice: HttpServiceService) { }
+  public gitHubUserSearch:string | undefined;
+
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.httpservice.getUsers()
-    .subscribe((response: any) => (
-      console.log("Data",Response)
-    ));
+  
   }
 
 }
