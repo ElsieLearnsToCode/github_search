@@ -1,4 +1,6 @@
+import { HttpServiceService } from './../../services/http-service.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-github',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpservice: HttpServiceService) { }
 
   ngOnInit(): void {
+    
   }
 
 }
