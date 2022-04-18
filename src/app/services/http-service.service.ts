@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { User } from '../classes/user';
 import { Repository } from '../classes/repository';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,9 @@ export class HttpServiceService {
     
   }
 
-  getUsers() {
-    return this.http.get(`https://api.github.com/search/users?q={query}{&page,per_page,sort,order}/api_key=%${environment.APIKey}`);
+// logic to get gh profile
+  public getProfile (githubUserQuery: string) {
+    let dataUrl = `https://api.github.com/users/${githubUserQuery}?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRETS}`;
   }
+
 }

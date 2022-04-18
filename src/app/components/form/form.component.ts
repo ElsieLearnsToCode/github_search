@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   
+  public githubUserQuery: string | undefined;
   constructor() { }
 
   public searchUserName() {
