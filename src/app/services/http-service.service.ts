@@ -29,6 +29,14 @@ export class HttpServiceService {
     );
   }
 
+  public getRepos (githubUserQuery: string):Observable<any>{
+    let dataUrl = `https://api.github.com/users/${githubUserQuery}/repos?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRETS}`;
+    return this.http.get("dataURL").pipe(
+      retry (),
+      catchError (this.handleErrors)
+    );
+  
+  }
   public handleErrors(error:HttpErrorResponse) {
     let errorMessage:string;
     if (error.error instanceof ErrorEvent) {

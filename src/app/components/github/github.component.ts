@@ -10,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class GithubComponent implements OnInit {
 
   public gitHubUserSearch:string | undefined;
+  public githubProfile: any;
+  public githubRepos!: any[];
+  
 
 
-  constructor() { }
+  constructor(private httpServiceService: HttpServiceService) { }
 
   ngOnInit(): void {
   
