@@ -1,27 +1,37 @@
-# AngularGithubSearch
+# GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+# Author
+Elsie Akoth
 
-## Development server
+# Description
+Github Search is website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that individual's public repositories, among others.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Behaviour Driven Development
+A user is able to:
+* Search and display a Github user's profile information.
+* Search and display a GIthub user's public repositories.
 
-## Code scaffolding
+## Known Bugs
+At present, a user is unable to:
+* search and view a Github User's names and descriptions.
+* search and view GIthub repositories.
+* I have not run any end-to-end tests on the website.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## SetUp/Installation Requirements
+* Clone or download and unzip the repository from github, https://github.com/ElsieLearnsToCode/github_search
+* cd angular_github_search
+* Run ng serve from your terminal
 
-## Build
+## Technologies Used
+* HTML5
+* CSS & Bootstrap CSS
+* Javascript & Typescript
+* Angular Github Search was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
+## Support and Contact Details
+For any concerns, suggestions, contributions or feedback, reach me through (elsieakoth21@gmail.com).
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## License
+This project is licensed under the MIT Open Source license Copyright (c) 2022 Elsie Akoth.
