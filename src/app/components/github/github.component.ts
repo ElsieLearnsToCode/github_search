@@ -1,5 +1,7 @@
-import { HttpServiceService } from './../../services/http-service.service';
+
 import { Component, OnInit } from '@angular/core';
+
+
 
 
 @Component({
@@ -9,20 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  public gitHubUserSearch:string | undefined;
-  public githubProfile: any;
-  public githubRepos!: any[];
+  // public gitHubUserSearch:any;
+  // public githubProfile: any;
+  // public githubRepos!: any[];
   
 
 
-  constructor(private httpServiceService: HttpServiceService) { }
+  constructor() { }
+
+  // public searchUser () {
+  //   this.httpServiceService.getProfile(this.gitHubUserSearch).subscribe(
+
+  //   );
+  // }
+
+  // public searchRepos() {
+  //   this.httpServiceService.getRepos(this.gitHubUserSearch).subscribe(
+
+  //   );
+  // }
 
   ngOnInit(): void {
+    
+    };
+      
+    
+
+  
   
   }
 
-}
-function subscribe(arg0: (response: any) => any) {
-  throw new Error('Function not implemented.');
-}
+
+
 

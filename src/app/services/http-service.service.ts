@@ -1,55 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { count, observable, retry } from 'rxjs';
-import { User } from '../classes/user';
-import { Repository } from '../classes/repository';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { HttpErrorResponse } from '@angular/common/http';
-import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-
-
-
+import {map} from 'rxjs/operators';
+import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 @Injectable({
   providedIn: 'root'
 })
 export class HttpServiceService {
-
-  constructor(private http:HttpClient) { 
-    
-  }
-
-// logic to get gh profile
-  public getProfile (githubUserQuery: string):Observable<any>{
-    let dataUrl = `https://api.github.com/users/${githubUserQuery}?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRETS}`;
-    return this.http.get("dataURL").pipe(
-      retry (),
-      catchError (this.handleErrors)
-    );
-  }
-
-  public getRepos (githubUserQuery: string):Observable<any>{
-    let dataUrl = `https://api.github.com/users/${githubUserQuery}/repos?client_id=${environment.CLIENT_ID}&client_secret=${environment.CLIENT_SECRETS}`;
-    return this.http.get("dataURL").pipe(
-      retry (),
-      catchError (this.handleErrors)
-    );
-  
-  }
-  public handleErrors(error:HttpErrorResponse) {
-    let errorMessage:string;
-    if (error.error instanceof ErrorEvent) {
-      errorMessage = `MESSAGE : ${error.error.message}`;
-    }
-
-    else {
-      errorMessage = `STATUS : ${error.status} MESSAGE : ${error.message}`;
-    }
-
-    return throwError(errorMessage);
-  }
-
-   
-
+  private username: string;
+  private CLIENT_SECRETS:"0c65ef0e74794ee0d49e76ba791a4ccef33b5df9" | undefined;
+  constructor(private httpClient:HttpClient) {
+    this.username='ElsieLearnsToCode';
+   }
+   getProfileInfo(){
+     var profile= this.httpClient.get("https://api.github.com/users/" + this.username)
+     .pipe(map((response: any)=>response));
+     console.log(profile)
+     return profile
+   }
+   getProfileRepos(){
+    var repos= this.httpClient.get("https://api.github.com/users/" + this.username + "/repos")
+    .pipe(map((response: any)=>response));
+    return repos;
+   }
+   updateProfile(username: string){
+     this.username= username
+   }
 }

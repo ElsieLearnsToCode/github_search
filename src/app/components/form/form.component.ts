@@ -11,7 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponent implements OnInit {
   
   public githubUserQuery: string | undefined;
-  constructor() { }
+  httpServiceService: any;
+  
+  constructor() {
+    this.httpServiceService.searchUserName().subscribe((response: any) => {
+      this.httpServiceService = response.User.name;
+    });
+   }
 
   public searchUserName() {
     
